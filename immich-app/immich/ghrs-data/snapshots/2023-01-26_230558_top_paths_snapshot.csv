@@ -1,0 +1,11 @@
+url_path,views_total,views_unique
+/immich-app/immich,6331,3714
+/immich-app/immich/issues,952,297
+/immich-app/immich/pulls,654,129
+/immich-app/immich/releases,411,263
+/immich-app/immich/discussions/1006,352,282
+/immich-app/immich/releases/tag/v1.42.0_65-dev,323,243
+/immich-app/immich/tree/main/docker,210,131
+/immich-app/immich/commits/main,200,62
+/immich-app/immich/blob/main/docker/docker-compose.yml,171,120
+/immich-app/immich/discussions,120,46
