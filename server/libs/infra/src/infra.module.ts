@@ -1,6 +1,5 @@
 import {
   ICryptoRepository,
-  IDeviceInfoRepository,
   IJobRepository,
   IKeyRepository,
   ISharedLinkRepository,
@@ -18,8 +17,6 @@ import {
   APIKeyEntity,
   APIKeyRepository,
   databaseConfig,
-  DeviceInfoEntity,
-  DeviceInfoRepository,
   SharedLinkEntity,
   SharedLinkRepository,
   SystemConfigEntity,
@@ -32,7 +29,6 @@ import { JobRepository } from './job';
 
 const providers: Provider[] = [
   { provide: ICryptoRepository, useClass: CryptoRepository },
-  { provide: IDeviceInfoRepository, useClass: DeviceInfoRepository },
   { provide: IKeyRepository, useClass: APIKeyRepository },
   { provide: IJobRepository, useClass: JobRepository },
   { provide: ISharedLinkRepository, useClass: SharedLinkRepository },
@@ -45,14 +41,7 @@ const providers: Provider[] = [
 @Module({
   imports: [
     TypeOrmModule.forRoot(databaseConfig),
-    TypeOrmModule.forFeature([
-      APIKeyEntity,
-      DeviceInfoEntity,
-      UserEntity,
-      SharedLinkEntity,
-      SystemConfigEntity,
-      UserTokenEntity,
-    ]),
+    TypeOrmModule.forFeature([APIKeyEntity, UserEntity, SharedLinkEntity, SystemConfigEntity, UserTokenEntity]),
     BullModule.forRootAsync({
       useFactory: async () => ({
         prefix: 'immich_bull',

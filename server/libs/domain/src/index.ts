@@ -3,7 +3,6 @@ export * from './api-key';
 export * from './asset';
 export * from './auth';
 export * from './crypto';
-export * from './device-info';
 export * from './domain.module';
 export * from './job';
 export * from './oauth';

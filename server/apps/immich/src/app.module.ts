@@ -15,7 +15,6 @@ import { InfraModule } from '@app/infra';
 import {
   APIKeyController,
   AuthController,
-  DeviceInfoController,
   OAuthController,
   ShareController,
   SystemConfigController,
@@ -53,7 +52,6 @@ import { AuthGuard } from './middlewares/auth.guard';
     AppController,
     APIKeyController,
     AuthController,
-    DeviceInfoController,
     OAuthController,
     ShareController,
     SystemConfigController,
