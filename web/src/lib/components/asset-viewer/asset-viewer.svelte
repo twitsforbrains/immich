@@ -252,6 +252,7 @@
 </script>
 
 <section
+	data-testid="asset-viewer-testid"
 	id="immich-asset-viewer"
 	class="fixed h-screen w-screen left-0 top-0 overflow-y-hidden bg-black z-[999] grid grid-rows-[64px_1fr] grid-cols-4"
 >

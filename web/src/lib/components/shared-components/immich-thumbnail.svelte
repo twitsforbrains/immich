@@ -152,6 +152,7 @@
 
 <IntersectionObserver once={false} let:intersecting>
 	<div
+		data-testid="immich-thumbnail-testid"
 		style:width={`${thumbnailSize}px`}
 		style:height={`${thumbnailSize}px`}
 		class={`bg-gray-100 dark:bg-immich-dark-gray relative select-none ${getSize()} ${
