@@ -1,6 +1,6 @@
 import { CollectionCreateSchema } from 'typesense/lib/Typesense/Collections';
 
-export const assetSchemaVersion = 1;
+export const assetSchemaVersion = 2;
 export const assetSchema: CollectionCreateSchema = {
   name: `assets-v${assetSchemaVersion}`,
   fields: [
@@ -30,6 +30,7 @@ export const assetSchema: CollectionCreateSchema = {
     // smart info
     { name: 'smartInfo.objects', type: 'string[]', facet: true, optional: true },
     { name: 'smartInfo.tags', type: 'string[]', facet: true, optional: true },
+    { name: 'smartInfo.clip', type: 'float[]', facet: false, optional: true, num_dim: 512 },
   ],
   token_separators: ['.'],
   enable_nested_fields: true,
